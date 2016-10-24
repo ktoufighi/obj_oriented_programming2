@@ -1,10 +1,11 @@
 class People
-  def initialize(name)
+  def initialize(name, city)
     @name = name
+    @city = city
   end
 
   def greetings
-    puts "Hi, my name is #{@name}"
+    puts "Hi, my name is #{@name} and I live in #{@city}."
   end
 end
 
@@ -20,24 +21,24 @@ class Instructor < People
   end
 end
 
-class Coder < People
-  def learn
-    puts "I am struggling with learning to code in Ruby"
+class Designer < People
+  def work
+    puts "I am a desinger."
   end
 end
 
 
-chris = Instructor.new('Chris')
-christa = Student.new('Christa')
-kathy = Coder.new('Katayoon')
+chris = Instructor.new('Chris', 'Toronto')
+christa = Student.new('Christa', 'Barcelona')
+kathy = Designer.new('Katayoon', 'Richmond Hill')
 
 chris.greetings
 christa.greetings
 kathy.greetings
 
-
 chris.teach
 christa.learn
+kathy.work
 
 #christa.teach
 #teach is a function of a method being assigned to Instructor and not the Student class.
