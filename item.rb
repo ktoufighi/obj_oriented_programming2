@@ -6,6 +6,7 @@ class Item
     @item = item
     @price = price
   end
+end
 
 class Imported < Item
   def get_tax
@@ -26,6 +27,4 @@ class Exempt < Item
     tax = @price * 0
     return tax
   end
-end
-
 end
